@@ -1,1 +1,1 @@
-Just printing Hello world
+My first c programme
