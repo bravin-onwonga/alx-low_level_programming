@@ -1,4 +1,7 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
+/* more headers goes there */
 
 /**
  * main - Entry point
@@ -7,11 +10,11 @@
  */
 int main(void)
 {
-	int i;
+	char ch;
 
-	for (i = '9'; i >= '0'; i--)
+	for (ch = 'z'; ch >= 'a'; ch--)
 	{
-		putchar(i);
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
