@@ -10,11 +10,7 @@ int _abs(int n)
 	int j;
 
 	if (n >= 0)
-		_putchar(n);
+		return (n);
 	else
-	{
-		j = n * -1;
-		_putchar(j);
-	}
-	return ('0');
+		return (-n);
 }
