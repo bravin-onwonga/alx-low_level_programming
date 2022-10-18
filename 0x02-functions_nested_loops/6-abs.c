@@ -3,12 +3,10 @@
 /**
  *_abs - finds the absolute value of an integer
  *@n: is the integer whose absolute value is printed
- *Return: 0 always
+ *Return: absolute value of n
  */
 int _abs(int n)
 {
-	int j;
-
 	if (n >= 0)
 		return (n);
 	else
