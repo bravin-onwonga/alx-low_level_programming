@@ -13,9 +13,9 @@ int main(void)
 	x = 1;/* first value*/
 	y = 2;/*second value*/
 	printf("%lu, %lu", x, y);
-	while (count < 93)
+	while (count < 91)
 	{
-		if (count <= 92)
+		if (count <= 90)
 		{
 			printf(", ");
 		}
