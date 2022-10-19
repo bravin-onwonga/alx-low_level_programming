@@ -13,9 +13,9 @@ int main(void)
 	x = 1;/* first value*/
 	y = 2;/*second value*/
 	printf ("%lu, %lu", x, y);
-	while (count < 48)
+	while (count < 49)
 	{
-		if (count != 47)
+		if (count != 48)
 		{
 			printf(", ");
 		}
