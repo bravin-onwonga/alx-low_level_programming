@@ -14,10 +14,6 @@ int main(void)
 	y = 1;/*second value*/
 	while (count < 48)
 	{
-		if (count != 50)
-		{
-			printf(", ");
-		}
 		temp = x + y;
 		sum += temp;
 		x = y;
