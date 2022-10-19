@@ -6,13 +6,12 @@
  */
 int main(void)
 {
-	int x, y;
+	int x, y, sum;
 	int temp;
 	int count = 0;/* count of numbers printed*/
 
 	x = 0;/* first value*/
 	y = 1;/*second value*/
-	printf("%d, %d", x, y);
 	while (count < 48)
 	{
 		if (count != 50)
@@ -20,11 +19,12 @@ int main(void)
 			printf(", ");
 		}
 		temp = x + y;
-		printf("%d", temp);
+		sum += temp
 		x = y;
 		y = temp;
 		count++;
 	}
+	printf("%d", sum);
 	printf("\n");
 	return (0);
 }
