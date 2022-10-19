@@ -13,7 +13,7 @@ int main(void)
 	x = 1;/* first value*/
 	y = 2;/*second value*/
 	printf ("%lu, %lu", x, y);
-	while (count < 49)
+	while (count < 48)
 	{
 		if (count <= 47)
 		{
