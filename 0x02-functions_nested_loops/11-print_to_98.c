@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  *print_to_98 - prints all numbers between n and 98 , including 98 and n
  *descending if n > 98 , ascending if 98 < n
@@ -12,32 +12,25 @@ void print_to_98(int n)
 	{
 		while (n < 99)
 		{
-			_putchar(n + '0');
+			printf("%d", n);
 			if (n != 98)
 			{
-				_putchar(',');
-				_putchar(' ');
+				printf(", ");
 			}
 			n++;
 		}
-		_putchar('\n');
 	}
 	else if (n > 98)
 	{
 		while (n > 97)
 		{
+			printf("%d", n);
 			if (n != 98)
 			{
-				_putchar(n + '0');
-				_putchar(',');
-				_putchar(' ');
-			}
-			else
-			{
-				_putchar(n + '0');
+				printf(", ");
 			}
 			n--;
 		}
-		_putchar('\n');
 	}
+	printf('\n');
 }
