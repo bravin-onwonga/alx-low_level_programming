@@ -2,7 +2,7 @@
 
 /**
  * main - sums all numbers divisible by 3 or 5
- *Return: the sum
+ *Return: 0, success
  */
 int main(void)
 {
@@ -13,8 +13,9 @@ int main(void)
 		if (i % 3 == 0 || i % 5 == 0)
 		{
 			sum = sum + i;
+			printf(sum);
 		}
 	}
-	return (sum);
+	return (0);
 }
 
