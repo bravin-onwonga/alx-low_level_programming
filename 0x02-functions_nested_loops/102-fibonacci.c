@@ -15,7 +15,7 @@ int main(void)
 	printf ("%lu, %lu", x, y);
 	while (count < 49)
 	{
-		if (count <= 48)
+		if (count <= 47)
 		{
 			printf(", ");
 		}
