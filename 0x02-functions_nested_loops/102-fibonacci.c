@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	int x, y;
-	int temp;
+	long int x, y;
+	long int temp;
 	int count = 0;/* count of numbers printed*/
 
 	x = 1;/* first value*/
 	y = 2;/*second value*/
-	printf ("%d, %d", x, y);
+	printf ("%lu, %lu", x, y);
 	while (count < 48)
 	{
 		if (count != 47)
