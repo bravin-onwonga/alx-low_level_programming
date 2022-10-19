@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int x, y, sum;
+	int x, y;
 	int temp;
 	int count = 0;/* count of numbers printed*/
 
@@ -15,7 +15,7 @@ int main(void)
 	printf ("%d, %d", x, y);
 	while (count < 48)
 	{
-		if (count < 48)
+		if (count != 47)
 		{
 			printf(", ");
 		}
@@ -25,7 +25,6 @@ int main(void)
 		y = temp;
 		count++;
 	}
-	printf("%d", sum);
 	printf("\n");
 	return (0);
 }
