@@ -2,7 +2,7 @@
 
 /**
  * main - first 50 Fibonacci numbers
- *Return: 0, sucess
+ *Return: 0, success
  */
 int main(void)
 {
@@ -20,7 +20,7 @@ int main(void)
 			printf(", ");
 		}
 		temp = x + y;
-		printf("%d", temp);
+		printf("%lu", temp);
 		x = y;
 		y = temp;
 		count++;
