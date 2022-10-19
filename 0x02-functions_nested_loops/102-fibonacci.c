@@ -19,7 +19,7 @@ int main(void)
 			printf(", ");
 		}
 		temp = x + y;
-		sum += temp
+		sum += temp;
 		x = y;
 		y = temp;
 		count++;
