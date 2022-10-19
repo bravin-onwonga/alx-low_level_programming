@@ -23,7 +23,7 @@ int main(void)
 		printf("%d", temp);
 		x = y;
 		y = temp;
-		i++;
+		count++;
 	}
 	printf("\n");
 	return (0);
