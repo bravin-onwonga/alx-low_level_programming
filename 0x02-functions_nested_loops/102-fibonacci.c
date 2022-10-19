@@ -10,12 +10,17 @@ int main(void)
 	int temp;
 	int count = 0;/* count of numbers printed*/
 
-	x = 0;/* first value*/
-	y = 1;/*second value*/
+	x = 1;/* first value*/
+	y = 2;/*second value*/
+	printf ("%d, %d", x, y);
 	while (count < 48)
 	{
+		if (count < 48)
+		{
+			printf(", ");
+		}
 		temp = x + y;
-		sum += temp;
+		printf("%d", temp);
 		x = y;
 		y = temp;
 		count++;
