@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
- *main - prints 'Fizz' if divisible by 3
- *prints 'Buzz' if divisible by 5,
- *prints 'FizzBuzz' if divisible by 15
- *for numbers between 1 - 100.
+ *main - FizzBuzz
+ *
  *Return: 0
  */
 
