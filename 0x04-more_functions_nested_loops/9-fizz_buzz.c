@@ -5,7 +5,7 @@
  *prints 'Buzz' if divisible by 5,
  *prints 'FizzBuzz' if divisible by 15
  *for numbers between 1 - 100.
- *Return: 0 (success)
+ *Return: 0
  */
 
 int main(void)
@@ -18,6 +18,8 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
+		else if (i == 100)
+			printf("Buzz ");
 		else if ((i % 5 == 0) && (i % 15 != 0))
 		{
 			printf("Buzz ");
