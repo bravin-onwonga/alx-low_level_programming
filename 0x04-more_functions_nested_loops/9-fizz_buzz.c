@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- *main - prints 'Fizz' if divisible by 3,
- *prints 'Buzz' if divisible by 5, 
+ *main - prints 'Fizz' if divisible by 3
+ *prints 'Buzz' if divisible by 5,
  *prints 'FizzBuzz' if divisible by 15
  *for numbers between 1 - 100.
  *Return: 0 (success)
@@ -31,4 +31,4 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
-}		
+}
