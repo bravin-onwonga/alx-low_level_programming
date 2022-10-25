@@ -14,4 +14,8 @@
 
 7-puts_half.c prints half of a string, followed by a new line, if the lenght is odd then one is subtracted from the length.
 
+8-print_array.c prints n elements of an array of integers, followed by a new line.
+
+
+
 
