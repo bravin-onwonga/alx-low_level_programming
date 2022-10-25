@@ -8,7 +8,7 @@
 
 4-print_rev.c prints string in reverse folowed by a new line.
 
-
+5-rev_string.c contains a function that reverses a string.
 
 
 
