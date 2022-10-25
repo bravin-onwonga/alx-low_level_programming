@@ -18,6 +18,6 @@
 
 9-strcpy.c copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest. Similar to strcpy provided by the standard library.
 
-
+100-atoi.c converts a string to an intger, check character before the digit; if '-'it is negative else positive.
 
 
