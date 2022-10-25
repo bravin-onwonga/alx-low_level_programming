@@ -2,7 +2,10 @@
 
 /**
  *print_array- prints an array
+ *@n: integer parameter
+ *@a: string parameter
  *
+ *Return: Nothing.
  */
 
 void print_array(int *a, int n)
