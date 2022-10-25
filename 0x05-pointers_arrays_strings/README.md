@@ -2,6 +2,7 @@
 
 1-swap.c swaps the values of two integers whose pointers are passed as parameters.
 
+2-strlen.c returns the length of a string.
 
 
 
