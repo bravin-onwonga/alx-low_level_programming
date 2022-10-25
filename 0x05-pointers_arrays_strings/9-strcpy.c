@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcpy - copies a string from one pointer to another 
+ *_strcpy - copies a string from one pointer to another
  * plus terminating null byte (\0)
  *
  * @src: source of string parameter input
