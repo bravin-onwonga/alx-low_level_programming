@@ -6,7 +6,7 @@
 
 3-puts.c prints a string, followed by a new line, to stdout.
 
-
+4-print_rev.c prints string in reverse folowed by a new line.
 
 
 
