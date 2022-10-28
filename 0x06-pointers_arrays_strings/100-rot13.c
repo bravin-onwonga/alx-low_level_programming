@@ -15,7 +15,7 @@ char *rot13(char *p)
 
 	for (i = 0; p[i]; i++)
 	{
-		for (j = 0; j < 26; j++)
+		for (j = 0; str1[j]; j++)
 		{
 			if (p[i] == str1[j])
 			{
