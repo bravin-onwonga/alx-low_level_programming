@@ -7,17 +7,19 @@
  *Return: char
  */
 
-char char *rot13(char *p)
+char *rot13(char *p)
 {
-	int i = 0;
+	int i, j;
+	char str1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char str2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (p[i] != '\0')
+	for (i = 0; p[i] != '\0'; i++)
 	{
-		if ((p[i] >= 'a' && p[i] <= 'z' || p[i] >= 'A' && p[i] <= 'Z'))
+		for (j = 0; j < 26; j++)
 		{
-			p[i] = p[i] - 32;
+			if (p[i] == str1[j])
+				p[i] = str2[j];
 		}
-		i++;
 	}
 	return (p);
 }
