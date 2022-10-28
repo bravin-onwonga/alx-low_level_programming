@@ -13,7 +13,7 @@ char char *rot13(char *p)
 
 	while (p[i] != '\0')
 	{
-		if (p[i] >= 'a' && p[i] <= 'z' || p[i] >= 'A' && p[i] <= 'Z')
+		if ((p[i] >= 'a' && p[i] <= 'z' || p[i] >= 'A' && p[i] <= 'Z'))
 		{
 			p[i] = p[i] - 32;
 		}
