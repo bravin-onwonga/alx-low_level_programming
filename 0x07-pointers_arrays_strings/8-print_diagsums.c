@@ -4,10 +4,10 @@
 /**
  * print_diagsums - sum of the two diagonals of a square matrix of integers
  *@a: array
- *size:integer
+ *@size:integer
  */
 
- void print_diagsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i, j, sumdiag1 = 0, sumdiag2 = 0, step1, step2;
 
