@@ -9,13 +9,23 @@
 
 int _sqrt_recursion(int n)
 {
-	int i = 0;
-
-	if (i * i == n && i < (n / 2))
-	{
-		return (i);
-	}
-	return _sqrt_recursion(i + 1);
-	return (-1);
+	return (getSqrt(n, 1));
 }
 
+/**
+ *getSqrt - function that determines square root
+ *@x: similar to n
+ *@y: integer
+ *Return: Square root of n or -1
+ */
+
+int getSqrt(int x, int y)
+{
+	int s = y * y;
+
+	if (s > x)
+		return (-1);
+	if (s == x)
+		return (y);
+	return (getSqrt(x, y + 1));
+}
