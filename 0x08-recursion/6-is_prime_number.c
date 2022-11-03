@@ -10,7 +10,7 @@
 int is_prime_number(int n)
 {
 	if (n < 2)
-		return (-1);
+		return (0);
 	if (n == 2)
 		return (1);
 	return (findPrime(n, 2));
@@ -27,11 +27,11 @@ int is_prime_number(int n)
 int findPrime(int a, int b)
 {
 	a = a / 2;
-	if (a % b == 0 && a != b)
+	if (a % b == 0)
 	{
-		return (-1);
+		return (0);
 	}
-	else
+	if (b > a)
 		return (1);
-	return (findPrime(a, b));
+	return (findPrime(a, b + 1));
 }
