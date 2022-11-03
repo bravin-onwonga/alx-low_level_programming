@@ -9,17 +9,17 @@
 
 int _sqrt_recursion(int n)
 {
-	return (natural_square(n, 1));
+	return (getSqrt(n, 1));
 }
 
 /**
- *natural_square - function that determines square root
+ *getSqrt - function that determines square root
  *@x: similar to n
  *@y: integer
  *Return: Square root of n or -1
  */
 
-int natural_square(int x, int y)
+int getSqrt(int x, int y)
 {
 	int s = y * y;
 
@@ -27,5 +27,5 @@ int natural_square(int x, int y)
 		return (-1);
 	if (s == x)
 		return (y);
-	return (natural_square(x, y + 1));
+	return (getSqrt(x, y + 1));
 }
