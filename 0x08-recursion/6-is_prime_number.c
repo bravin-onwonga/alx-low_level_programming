@@ -21,17 +21,16 @@ int is_prime_number(int n)
  *@a: integer
  *@b: integer
  *
- *Return: 1 or -1
+ *Return: 1 or 0
  */
 
 int findPrime(int a, int b)
 {
-	a = a / 2;
 	if (a % b == 0)
 	{
 		return (0);
 	}
-	if (b > a)
+	if (b > ((a / 2) + 1))
 		return (1);
 	return (findPrime(a, b + 1));
 }
