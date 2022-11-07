@@ -13,28 +13,31 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j, k;
+	int i, j, k, ans, n;
 
 	if (argc == 1)
 		printf("0\n");
-	for (i = 1; i < argc; i++)
+	else
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (i = 1; i < argc; i++)
 		{
-			if (!((argv[i][j] >= '0' && argv[i][j] <= '9') || (argv[i][j] >= '0' && argv[i][j] <= '9')))
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!((argv[i][j] >= '0' && argv[i][j] <= '9') || (argv[i][j] >= '0' && argv[i][j] <= '9')))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 		}
-	}
-	int ans = 0;
+		ans = 0;
 
-	for (k = 0; k < argc; k++)
-	{
-		n = argv[k];
-		ans += n;
+		for (k = 0; k < argc; k++)
+		{
+			n = atoi(argv[k]);
+			ans += n;
+		}
+		printf("%d\n", ans);
 	}
-	printf("%d\n", ans);
 	return (0);
 }
