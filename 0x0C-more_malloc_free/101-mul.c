@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *main -multiplies two positive numbers
+ *main - multiplies two positive numbers
  *@argc: number of arguments
  *@argv: argument vector
  *
- *Return: resulting number
+ *Return: int
  */
 
 int main(int argc, char *argv[])
@@ -31,5 +31,6 @@ int main(int argc, char *argv[])
 	}
 	mul = atol(argv[1]) * atol(argv[2]);
 	printf("%lu\n", mul);
+
 	return (0);
 }
