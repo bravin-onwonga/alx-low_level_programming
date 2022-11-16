@@ -13,12 +13,12 @@
  * Description: create a struct dog with three elements,
  *	name, age and the name of the owner of the dog.
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 /*More prototypes*/
 int _putchar(char c);
 void init_dog(struct dog *d, char *name, float age, char *owner);
