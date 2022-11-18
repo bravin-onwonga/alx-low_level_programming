@@ -22,22 +22,22 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == t_arg[j] && c)
 			{
-				printf(" ");
+				printf(", ");
 				break;
 			} j++;
 		}
 		switch (format[i])
 		{
-			case "c":
+			case 'c':
 				printf("%c", va_arg(valst, int)), c = 1;
 				break;
-			case "i":
+			case 'i':
 				printf("%d", va_arg(valst, int)), c = 1;
 				break;
-			case "f":
-				printf("%f", va_arg(valst, int)), c = 1;
+			case 'f':
+				printf("%f", va_arg(valst, double)), c = 1;
 				break;
-			case "s":
+			case 's':
 				str = va_arg(valst, char *), c = 1;
 				if (!str)
 				{
@@ -48,5 +48,5 @@ void print_all(const char * const format, ...)
 				break;
 		} i++;
 	}
-	printf("\n", va_end(valst));
+	printf("\n"), va_end(valst);
 }
