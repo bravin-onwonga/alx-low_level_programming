@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list lst;
 	unsigned int i;
-	char *ch;
+	char *str;
 
 	va_start(lst, n);
 
@@ -20,8 +20,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		ch = va_arg(lst, char *);
 
-		if (ch)
-			printf("%s", ch);
+		if (str)
+			printf("%s", str);
 		else
 			printf("(nil)");
 		if (i < n - 1)
