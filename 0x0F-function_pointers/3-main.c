@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98)
+		exit(98);
 	}
 
 	arg1 = atoi(argv[1]);
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	result = func(ar1, arg2);
+	result = func(arg1, arg2);
 
 	printf("%d\n", result);
 
