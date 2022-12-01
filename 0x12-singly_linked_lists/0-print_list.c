@@ -1,9 +1,9 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * print_list - prints all the elements of a linked_list
  * @h: a linked_list
- * Return: a structure to a linked_list
+ * Return: number of nodes.
  */
 
 size_t print_list(const list_t *h)
