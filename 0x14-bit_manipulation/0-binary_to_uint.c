@@ -2,7 +2,7 @@
 
 /**
  * binary_to_uint - function that converts binary to decimal
- * @b - string conatinign binary
+ * @b: string conatinign binary
  *
  * Return: decimal number
  */
