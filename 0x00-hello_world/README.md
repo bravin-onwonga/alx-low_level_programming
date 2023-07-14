@@ -2,7 +2,7 @@
 
 ## Requirements
 
-##C
+## C
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on ***Ubuntu 20.04 LTS*** using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - All your files should end with a new line
@@ -12,7 +12,7 @@
 - You are not allowed to use system
 - Your code should use the Betty style. It will be checked using ***betty-style.pl*** and ***betty-doc.pl***
 
-##Files in this project.
+## Files in this project.
 
 1. ***0-preprocessor*** :  A script that runs a C file through the preprocessor and save the result into another file.
 - The C file name will be saved in the variable $CFILE
