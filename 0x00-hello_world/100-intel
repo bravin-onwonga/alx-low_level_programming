@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE -march=x86-64
+gcc -S -march=x86-64 $CFILE
