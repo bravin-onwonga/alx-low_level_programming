@@ -3,31 +3,23 @@
 /**
  * main - Entry point
  * @i - integer
- * @j - integer
  * Return: Always 0 (Sucess)
  */
 
 int main(void)
 {
 	int i;
-	int j;
 
 	for (i = '0'; i <= '9'; i++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		putchar(i);
+		if (i != '9')
 		{
-			if (i != '0')
-				putchar(i);
-			putchar(j);
-			if (i == '9' && j == '9')
-				putchar('\n');
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
 		}
+		else
+			putchar('\n');
 	}
-
 	return (0);
 }
