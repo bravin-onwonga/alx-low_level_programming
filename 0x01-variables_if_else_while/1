@@ -1,0 +1,35 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ *@i, @j, @n - integers
+ *Return: 0 (success)
+ */
+int main(void)
+{
+	int i;
+	int j;
+	int n = '1';
+
+	for (i = '0'; i <= '8'; i++)
+	{
+		for (j = n; j <= '9'; j++)
+		{
+			if (i != j)
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+		n++;
+	}
+	return (0);
+}
