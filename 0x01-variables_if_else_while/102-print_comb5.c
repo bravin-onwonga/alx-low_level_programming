@@ -1,38 +1,37 @@
 #include <stdio.h>
 
+/**
+ * main - Entry
+ *
+ * @i - first value
+ * @j - second value
+ * Return: 0 (success)
+ */
+
 int main(void)
 {
 	int i;
 	int j;
-	int k;
-	int l;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		for (j = 0; j < 100; j++)
 		{
-			for (k = '0'; k <= '9'; k++)
+			if (i < j)
 			{
-				for (l = '0'; l <= '9'; l++)
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 				{
-					if (k >= i && l > j && j != l)
-					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-						if (i == '9' && j == '8' && k == '9' && l == '9')
-							putchar('\n');
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }
