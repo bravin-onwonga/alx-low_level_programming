@@ -11,7 +11,7 @@ int main(void)
 {
 	int i;
 	char c;
-	char str[]="_putchar";
+	char str[] = "_putchar";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
