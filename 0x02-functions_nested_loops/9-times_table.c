@@ -3,9 +3,9 @@
 /**
  * times_table - prints time table from 0 to 9
  *
- * @i: integer
- * @j: integer
- * @mul: result of i * j
+ * @i - integer
+ * @j - integer
+ * @mul - result of i * j
  */
 
 void times_table(void)
