@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * printInt - prints integer using _putchar
+ * @n: integer to be printed
+ */
 
 void printInt(int n)
 {
@@ -8,13 +12,19 @@ void printInt(int n)
 		_putchar('-');
 		n = -n;
 	}
-
 	if (n / 10)
 	{
 		printInt(n / 10);
 	}
 	_putchar((n % 10) + 48);
 }
+
+/**
+ * print_to_98 - prints all integers to 98
+ *
+ * @n: integer
+ * @i - holds the value during looping
+ */
 
 void print_to_98(int n)
 {
@@ -23,7 +33,7 @@ void print_to_98(int n)
 	if (n == 98)
 	{
 		printInt(n);
-		_putchar('\n');		
+		_putchar('\n');
 	}
 
 	else if (n < 98)
