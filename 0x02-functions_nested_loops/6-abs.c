@@ -5,7 +5,6 @@
  * _abs - print absolute value of an integer
  *
  * @n: integer
- * @res - absolute value of n
  * Return: 0 (success)
  */
 
