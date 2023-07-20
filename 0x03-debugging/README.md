@@ -11,7 +11,9 @@
 - A README.md file, at the root of the folder of this project (i.e. 0x03-debugging), describing what this project is about
 
 ### Files in this project
------------ | -------------
+
+Filename | Description
+-------- | ------------
 - ***main.h*** | Header file containing all the prototypes for this project
 - ***0-main.c*** | Test file to check whether this [function](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x01-variables_if_else_while/0-positive_or_negative.c) works correctly.
 - ***1-main.c*** | Debugging by commenting out the part that caused infinite loop.
