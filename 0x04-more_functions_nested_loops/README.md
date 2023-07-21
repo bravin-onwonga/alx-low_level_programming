@@ -23,5 +23,5 @@ Filename | Description
 -------- | -----------
 [main.h](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/main.h) | Header file containing all libraries and prototypes for this project.
 [0-isupper.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/0-isupper.c) | Contains a function that checks for uppercase character.
-[1-isdigit.c]() | Function that check if parameter is a digit - similar to ```isdigit```
+[1-isdigit.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/1-isdigit.c) | Function that check if parameter is a digit - similar to ```isdigit```
 
