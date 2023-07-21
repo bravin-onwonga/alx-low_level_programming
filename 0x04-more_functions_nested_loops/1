@@ -10,10 +10,10 @@
 	  */
 int main(void)
 {
-	int r;
 	srand(time(0));
 
-	r = rand() % 31 - 10;
+	int r;
+	r = rand() % 100 + 1;
 	print_line(r);
 	return (0);
 }
