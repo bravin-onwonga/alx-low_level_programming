@@ -27,4 +27,5 @@ Filename | Description
 [2-mul.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/2-mul.c) | Funciton that multiplies two integers.
 [3-print_numbers.c]() | Function that prints the numbers, from 0 to 9, followed by a new line.
 [4-print_most_numbers.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/4-print_most_numbers.c) | Function that prints **0** to **9** except **2** and **4**.
-[5-more_numbers.c]() | Prints all numbers from **0** to **14**, ten times.
+[5-more_numbers.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x04-more_functions_nested_loops/5-more_numbers.c) | Prints all numbers from **0** to **14**, ten times.
+[6-print_line.c]() | Prints ```_``` **n** times.
