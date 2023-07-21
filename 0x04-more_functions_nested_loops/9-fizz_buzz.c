@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+  * main - Entry point
+  *
+  * @i - holds value of int between 1 and 100
+  * Return: Always 0 (success)
+  */
+
 int main(void)
 {
 	int i;
