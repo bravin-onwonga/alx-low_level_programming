@@ -3,7 +3,7 @@
 /**
   * print_numbers - prints int from 0 to 9
   *
-  * @i - holds value to be printed
+  * @c - character that holds value to be printed
   */
 
 void print_numbers(void)
