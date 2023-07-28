@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 
 /**
   * _puts - functions similarly to the puts function
@@ -14,4 +14,5 @@ void _puts(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
+	_putchar('\n');
 }
