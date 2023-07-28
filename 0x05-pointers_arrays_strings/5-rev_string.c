@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * print_rev - prints string in reverse
+  * rev_string - prints string then prints it in reverse
   *
   * @s: pointer to string
   * @i - integer
@@ -13,10 +13,8 @@
 	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
-	{
 		_putchar(s[i]);
-		_putchar('\n');
-	}
+	_putchar('\n');
 	for (j = i - 1; j >= 0; j--)
 		_putchar(s[j]);
 	_putchar('\n');
