@@ -5,25 +5,26 @@
   *             (length - 1) / 2 if length is odd
   *
   * @str: pointer to string
-  * @i - integer
-  * @j - integer
+  * @i - iteratoe
+  * @len - index before null byte
+  * @half - middle of the string
   */
 
 void puts_half(char *str)
 {
-	int i, j;
+	int len, half, i;
 
-	for (i = 0; *(str + i) != '\0'; i++)
-		i++;
-	if (i % 2 == 0)
-	{
-		for (j = i / 2; j < i; j++)
-			_putchar(*(str + j));
-	}
+	len = 0;
+
+	while (*(str + len) != '\0')
+		len++;
+
+	if (len % 2 == 0)
+		half = len / 2;
 	else
-	{
-		for (j = ((i) / 2) + 1; j < i; j++)
-			_putchar(*(str + j));
-	}
+		half = (len / 2) + 1;
+
+	for (i = half; i < len; i++)
+		_putchar(str[i]);
 	_putchar('\n');
 }
