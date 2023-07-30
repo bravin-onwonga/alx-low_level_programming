@@ -10,5 +10,12 @@
 
 void rev_string(char *s)
 {
-	printf("%p", s);
+	int i;
+	char *r;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	while(i)
+		r = s[i];
+	return r;
 }
