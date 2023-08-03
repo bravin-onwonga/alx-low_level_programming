@@ -1,14 +1,15 @@
 #include "main.h"
 
-int getLen(char *s, int len)
-{
+/**
+  * _strlen_recursion - calculates the length of a string
+  *
+  * @s: address to memory location of string
+  * Return: length of string
+  */
 
 int _strlen_recursion(char *s)
 {
-	int len, l;
-
-	l = 1;
-	len = getLen(s, len)
-
-	return (len);
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
