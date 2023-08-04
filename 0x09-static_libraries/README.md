@@ -27,5 +27,7 @@
 - All your files must be executable
 
 ### Files in this project
-[main.h]() : Header file containing all prototypes.
-[libmy.a]() : Static library for all functions in the ```main.h``` file.
+[main.h](https://github.com/bravin-onwonga/alx-low_level_programming/blob/main/0x09-static_libraries/main.h) - Header file containing all prototypes.
+```libmy.a``` - Static library for all functions in the ```main.h``` file.
+[create_static_lib.sh]() - Script that creates a library ```liball.a``` for all c files in the current directory.
+
