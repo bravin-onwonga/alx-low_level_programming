@@ -1,13 +1,13 @@
 #include "main.h"
 
 int countCoins(int n);
+
 /**
   * main - entry point
   *
   * @argc: argumnent count.
   * @argv: argument vector.
-  * @num - integer argument
-  * @count - number of coins.
+  *
   * Return: 1 if argument is not 1; 0 (success)
   */
 
@@ -22,9 +22,17 @@ int main(int argc, char *argv[])
 	}
 
 	num = atoi(argv[1]);
+
 	if (num < 0)
+	{
 		printf("0\n");
-	count = countCoins(num);
+	}
+
+	else
+	{
+		count = countCoins(num);
+	}
+
 	printf("%d\n", count);
 	exit(EXIT_SUCCESS);
 }
