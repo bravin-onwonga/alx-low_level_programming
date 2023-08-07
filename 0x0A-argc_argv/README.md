@@ -23,7 +23,7 @@ File | Description
 [1-args.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/1-args.c) | A program that prints the number of arguments passed into it.
 [2-args.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/2-args.c) | A program that prints all arguments it receives.
 [3-mul.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/3-mul.c) |  A program that multiplies two numbers.
-[4-add.c]](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/4-add.c) | A program that adds positive numbers.
+[4-add.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/4-add.c) | A program that adds positive numbers.
 [100-change.c](https://github.com/bravin-onwonga/alx-low_level_programming/blob/6fb1227524251f7ada56b9976e745bc3c605424c/0x0A-argc_argv/100-change.c#L36) | A program that prints the minimum number of coins to make change for an amount of money.You can use an unlimited number of coins of values 25, 10, 5, 2, and 1 cent.
 
 ### Author :goat:
