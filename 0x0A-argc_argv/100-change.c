@@ -22,16 +22,13 @@ int main(int argc, char *argv[])
 	}
 
 	num = atoi(argv[1]);
-
+	
 	if (num < 0)
 	{
-		printf("0\n");
+		num = 0;
 	}
 
-	else
-	{
-		count = countCoins(num);
-	}
+	count = countCoins(num);
 
 	printf("%d\n", count);
 	exit(EXIT_SUCCESS);
