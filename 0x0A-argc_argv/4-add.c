@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 {
 	int sum, num, i, j, k;
 
+	sum = 0;
+
 	if (argc == 1)
 	{
 		printf("%d\n", argc - 1);
