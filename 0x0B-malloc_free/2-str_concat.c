@@ -12,7 +12,7 @@ int getLen(char *c)
 	int len;
 
 	if (c == NULL)
-		return (0);
+		*c = '\0';
 
 	for (len = 0; c[len] != '\0'; len++)
 		len++;
