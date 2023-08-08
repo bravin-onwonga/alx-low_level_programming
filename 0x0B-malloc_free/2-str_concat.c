@@ -31,15 +31,15 @@ char *str_concat(char *s1, char *s2)
 	char *ar;
 
 	if (s1 == NULL)
-		*s1 = '\0';
+		s1[0] = '\0';
 
 	if (s2 == NULL)
-		*s2 = '\0';
+		s2[0] = '\0';
 
 	len_s1 = getLen(s1);
 	len_s2 = getLen(s2);
 
-	ar = malloc((len_s1 + len_s2) * sizeof(char));
+	ar = malloc((len_s1 + len_s2) * sizeof(char) + 1);
 
 	if (ar == NULL)
 		return (NULL);
