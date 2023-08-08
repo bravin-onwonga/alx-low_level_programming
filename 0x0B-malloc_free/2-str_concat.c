@@ -12,7 +12,7 @@ int getLen(char *c)
 	int len;
 
 	for (len = 0; c[len] != '\0'; len++)
-		len++;
+		;
 
 	return (len);
 }
