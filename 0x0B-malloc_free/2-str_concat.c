@@ -11,6 +11,9 @@ int getLen(char *c)
 {
 	int len;
 
+	if (c == NULL)
+		return (0);
+
 	for (len = 0; c[len] != '\0'; len++)
 		len++;
 
@@ -29,11 +32,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int i, j, len_s1, len_s2;
 	char *ar;
-
-	if (s1 == NULL)
-		*s1 = '\0';
-	if (s2 == NULL)
-		*s2 = '\0';
 
 	len_s1 = getLen(s1);
 	len_s2 = getLen(s2);
