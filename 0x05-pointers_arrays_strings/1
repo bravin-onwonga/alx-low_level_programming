@@ -1,19 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-  * rev_string - prints string then prints it in reverse
-  *
-  * @s: pointer to string
-  * @i - integer
-  * @j - integer
-  */
-
-void rev_string(char *s)
+   * main - check the code
+    *
+	 * Return: Always 0.
+	  */
+int main(void)
 {
-	int i, j;
+	    char s1[98];
+		    char *ptr;
 
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	for (j = i - 1; j >= 0; j--)
-		s = s[j];
+			    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+				    printf("%s", s1);
+					    printf("%s", ptr);
+						    return (0);
 }
