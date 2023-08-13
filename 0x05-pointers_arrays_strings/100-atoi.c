@@ -10,7 +10,8 @@
 int _atoi(char *s)
 {
 	/* Declaring variables */
-	int i, n, num, count;
+	int i, n, count;
+	unsigned int num;
 
 	/* Initializing variables */
 	count = 0;
