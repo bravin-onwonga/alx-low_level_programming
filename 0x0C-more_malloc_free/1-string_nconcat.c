@@ -44,12 +44,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	len_s1 = getLen(s1);
-	len_s2 = getLen(s1);
+	len_s2 = getLen(s2);
 
 	if (len_s2 < n)
 		n = len_s2;
 
-	ptr = malloc((len_s1 + n) * sizeof(char) + 1);
+	ptr = malloc((len_s1 + n) * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
