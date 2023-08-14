@@ -34,13 +34,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = malloc(1 * sizeof(char));
-		s1[0] = '\0';
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = malloc(1 * sizeof(char));
-		s2[0] = '\0';
+		s2 = "";
 	}
 
 	len_s1 = getLen(s1);
