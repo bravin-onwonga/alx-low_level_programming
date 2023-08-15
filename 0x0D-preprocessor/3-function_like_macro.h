@@ -1,14 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define ABS(x) (_abs(x))
-
-int _abs(int n)
-{
-	if (n < 0)
-		n = -n;
-
-	return (n);
-}
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #endif /* MAIN_H */
