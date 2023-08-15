@@ -1,0 +1,9 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+#define ABS(x) (x)
+
+#if (x < 0)
+	ABS(-x);
+
+#endif /* MAIN_H */
