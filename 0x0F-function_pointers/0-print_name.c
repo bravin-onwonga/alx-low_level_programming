@@ -9,8 +9,7 @@
 
 void print_name(char *s, void (*f)(char *))
 {
-	if (s == NULL)
-		s = "";
-	(*f)(s);
-	exit(EXIT_SUCCESS);
+	if (!s || !f)
+		return;
+	f(s);
 }
