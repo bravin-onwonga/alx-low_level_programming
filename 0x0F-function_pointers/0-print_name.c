@@ -9,5 +9,5 @@
 
 void print_name(char *s, void (*f)(char *))
 {
-	f(s);
+	(*f)(s);
 }
