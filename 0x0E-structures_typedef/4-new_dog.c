@@ -12,45 +12,51 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dawg;
-	int i, len;
-	char *name_cpy;
-	char *owner_cpy;
+	int len, i;
 
 	dawg = malloc(sizeof(dog_t));
 
 	if (dawg == NULL)
 	{
-		free(dawg);
 		return (NULL);
 	}
 
 	for (len = 0; name[len] != '\0'; len++)
 		;
 
-	name_cpy = malloc(sizeof(char) * len);
+	dawg->name = malloc(len + 1);
 
-	for (i = 0; i < len; i++)
+	if (dawg->name == NULL)
 	{
-		name_cpy[i] = name[i];
+		free(dawg->name);
+		return (NULL);
 	}
+
+	for (i = 0; name[i] != '\0'; i++)
+	{
+		dawg->name[i] = name[i];
+	}
+	dawg->name[i] = '\0';
+
+	dawg->age = age;
 
 	for (len = 0; owner[len] != '\0'; len++)
 		;
 
-	owner_cpy = malloc(sizeof(char) * len);
+	dawg->owner = malloc(len + 1);
 
-	if (owner_cpy == NULL)
+	if (dawg->owner == NULL)
 	{
-		free(owner_cpy);
+		free(dawg->owner);
+		return (NULL);
 	}
 
-	for (i = 0; i < len; i++)
+	for (i = 0; owner[i] != '\0'; i++)
 	{
-		owner_cpy[i] = owner[i];
+		dawg->owner[i] = owner[i];
 	}
-	
-	dawg->name = name;
-	dawg->age = age;
-	dawg->owner = owner;
+
+	dawg->owner[i] = '\0';
+
 	return (dawg);
 }
