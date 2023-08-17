@@ -1,5 +1,43 @@
 #include "dog.h"
 
+
+/**
+  * strLen - calc len of string
+  *
+  * @s: string
+  * Return: lenght of string
+  */
+
+int strLen(char *s)
+{
+	int len;
+
+	for (len = 0; s[len] != '\0'; len++)
+		;
+	return (len);
+}
+
+/**
+  * strCpy - copies a string 
+  *
+  * @src: string
+  * @dest: where copy is store
+  * Return: dest
+  */
+
+char *strCpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
+}
+
 /**
   * new_dog - creates a new struct similar to dog
   *
@@ -12,7 +50,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dawg;
-	int len, i;
+	int len_name, len_owner;
 
 	dawg = malloc(sizeof(dog_t));
 
@@ -21,10 +59,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (len = 0; name[len] != '\0'; len++)
-		;
+	len_name = strLen(name);
 
-	dawg->name = malloc(len + 1);
+	dawg->name = malloc(len_name + 1);
 
 	if (dawg->name == NULL)
 	{
@@ -32,18 +69,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; name[i] != '\0'; i++)
-	{
-		dawg->name[i] = name[i];
-	}
-	dawg->name[i] = '\0';
+	strCpy(dawg->name, name);
 
 	dawg->age = age;
 
-	for (len = 0; owner[len] != '\0'; len++)
-		;
+	len_owner = strLen(owner);
 
-	dawg->owner = malloc(len + 1);
+	dawg->owner = malloc(len_owner + 1);
 
 	if (dawg->owner == NULL)
 	{
@@ -51,12 +83,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; owner[i] != '\0'; i++)
-	{
-		dawg->owner[i] = owner[i];
-	}
-
-	dawg->owner[i] = '\0';
+	strCpy(dawg->owner, owner);
 
 	return (dawg);
 }
