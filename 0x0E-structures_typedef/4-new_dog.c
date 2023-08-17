@@ -18,7 +18,7 @@ int strLen(char *s)
 }
 
 /**
-  * strCpy - copies a string 
+  * strCpy - copies a string
   *
   * @src: string
   * @dest: where copy is store
