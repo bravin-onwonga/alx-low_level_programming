@@ -4,6 +4,7 @@
   * get_op_func - gets function using operator
   *
   * @s: operator (char)
+  * Return: pointer function to the operator selected
   */
 
 int (*get_op_func(char *s))(int, int)
@@ -22,6 +23,7 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (ops[i].op != NULL)
 	{
+		/* using strcmp since it compares entire string */
 		if (strcmp(ops[i].op, s) == 0)
 		{
 			return (ops[i].f);
