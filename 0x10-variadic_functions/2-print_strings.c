@@ -14,8 +14,6 @@ void actual_print(char *s)
 	{
 		putchar(s[k]);
 	}
-	putchar('\0');
-
 }
 
 /**
