@@ -41,7 +41,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			{
 				actual_print(s);
 				if (separator != NULL)
-					printf("%s ", separator);
+					printf("%s", separator);
 			}
 			else
 				printf("(nil)");
