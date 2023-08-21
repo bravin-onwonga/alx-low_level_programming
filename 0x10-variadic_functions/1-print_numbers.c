@@ -23,10 +23,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			if (separator == NULL)
 				printf("%d", num);
 			else
-				printf("%d%s ", num, separator);
+				printf("%d%s", num, separator);
 		}
-        else
-            printf("%d\n", num);
+		else
+			printf("%d\n", num);
 	}
 	va_end(ap);
 }
