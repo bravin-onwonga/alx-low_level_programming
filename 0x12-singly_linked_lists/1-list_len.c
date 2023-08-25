@@ -9,10 +9,9 @@
 
 size_t list_len(const list_t *h)
 {
-	unsigned int n;
+	unsigned long n = 0;
 	list_t *temp;
 
-	n = 0;
 	temp = malloc(sizeof(list_t));
 
 	if (h == NULL)
