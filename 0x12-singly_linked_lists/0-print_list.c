@@ -18,6 +18,7 @@ size_t print_list(const list_t *h)
 	if (h == NULL)
 		return (n);
 
+	/* set temp to first node*/
 	*temp = *h;
 
 	while (temp != NULL)
