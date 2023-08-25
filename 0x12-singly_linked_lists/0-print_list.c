@@ -12,11 +12,14 @@ size_t print_list(const list_t *h)
 	unsigned int n;
 	list_t *temp;
 
+	n = 0;
 	temp = malloc(sizeof(list_t));
+
+	if (h == NULL)
+		return (n);
 
 	*temp = *h;
 
-	n = 0;
 	while (temp != NULL)
 	{
 		n++;
