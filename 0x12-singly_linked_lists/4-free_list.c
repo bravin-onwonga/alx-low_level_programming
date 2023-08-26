@@ -4,7 +4,7 @@ void free_list(list_t *head)
 {
 	list_t *current;
 
-	while(head)
+	while (head)
 	{
 		current = head->next;
 		free(head->str);
