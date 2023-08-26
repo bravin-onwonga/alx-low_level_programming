@@ -10,25 +10,20 @@
 size_t print_list(const list_t *h)
 {
 	unsigned int n;
-	list_t *temp;
 
 	n = 0;
-	temp = malloc(sizeof(list_t));
-
 	if (h == NULL)
 		return (n);
 
-	/* set temp to first node*/
-	*temp = *h;
-
-	while (temp != NULL)
+	while (h != NULL)
 	{
 		n++;
-		if (temp->str != NULL)
-			printf("[%d] %s\n", temp->len, temp->str);
+		if (h->str != NULL)
+			printf("[%d] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
-		temp = temp->next;
+		h = h->next;
 	}
+
 	return (n);
 }
