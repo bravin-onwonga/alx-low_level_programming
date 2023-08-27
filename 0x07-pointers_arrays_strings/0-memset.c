@@ -20,7 +20,7 @@ char *_memset(char *s, char b, unsigned int n)
 
 	if (len < n)
 		len = n;
-	for (i = 0; i < len; i++)
+	for (i = 0; i < n; i++)
 		s[i] = b;
 	for (; i < n; i++)
 		s[i] = '\0';
