@@ -12,6 +12,9 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count, i, j;
 
+	if (s[0] == '\0' || accept[0] == '\0')
+		return (0);
+
 	count = 0;
 	for (i = 0; s[i] != ','; i++)
 	{
