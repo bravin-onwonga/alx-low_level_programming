@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * free_listint2 - frees memory held by singly linked list
+ *			and intializes the header to NULL
+ *
+ * @head: pointer to first node.
+*/
+
 void free_listint2(listint_t **head)
 {
 	listint_t *temp;
@@ -13,5 +20,5 @@ void free_listint2(listint_t **head)
 		free(current);
 		current = temp;
 	}
-	*head = NULL;
+	*head = NULL; /* Update head pointer to NULL*/
 }
