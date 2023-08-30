@@ -20,7 +20,7 @@ long int find_largestprime(long int n)
 	if (n == 2 || n == 3)
 		return (n);
 
-	for(i = 3; i * i <= n; i += 2)
+	for (i = 3; i * i <= n; i += 2)
 	{
 		while (n % i == 0)
 		{
@@ -43,7 +43,7 @@ long int find_largestprime(long int n)
 
 int main(void)
 {
-	long int num,largest_prime;
+	long int num, largest_prime;
 
 	num = 612852475143;
 
