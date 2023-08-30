@@ -7,16 +7,22 @@
 
 void printInt(int n)
 {
-	if (n < 0 && n != INT_MIN)
+	if (n == INT_MIN)
+	{
+		printInt(n / 10);
+		_putchar('8');
+		return;
+	}
+	if (n < 0)
 	{
 		_putchar('-');
-		n = -1 * n;
+		n = -n;
 	}
 	if (n / 10)
 	{
 		printInt(n / 10);
 	}
-	_putchar((n % 10) + 48);
+	_putchar((n % 10) + '0');
 }
 
 /**
