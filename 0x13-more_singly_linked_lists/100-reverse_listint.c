@@ -1,42 +1,26 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - frees linked list
+ * reverse_listint - reverse linked list
  *
- * @h: The pointer to first node in linked lists
- * Return: The number of elements in freed list
+ * @head: The pointer to first node in linked lists
+ * Return: pointer to first node of reversed list
  */
 
-size_t free_listint_safe(listint_t **h)
-
+listint_t *reverse_listint(listint_t **head)
 {
-	size_t len = 0;
-	int diff;
 	listint_t *temp;
+	listint_t *curr = *head;
+	listint_t *prev = NULL;
 
-	if (!h || !*h)
-		return (0);
-
-	while (*h)
+	while (curr)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
-		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			len++;
-		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			len++;
-			break;
-		}
+		temp = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = temp;
 	}
-
-	*h = NULL;
-
-	return (len);
+	*head = prev;
+	free(temp);
+	return (*head);
 }
