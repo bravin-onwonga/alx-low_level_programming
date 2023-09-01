@@ -31,7 +31,7 @@ int strLen(const char *s)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n;
-	int len, j, k, value;
+	int len, i, j, k, value;
 
 	n = 0;
 
@@ -39,15 +39,17 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 
 	len = strLen(b);
+
+	i = len;
 	k = 0;
-	while (k < 32 && len >= 0)
+	while (k <= len && i >= 0)
 	{
-		if (b[len] == '1' && k == 0)
+		if (b[i] == '1' && k == 0)
 		{
 			n = n + 1;
 		}
 
-		else if (b[len] == '1' && k != 0)
+		else if (b[i] == '1' && k != 0)
 		{
 			value = 1;
 			j = k;
@@ -59,7 +61,7 @@ unsigned int binary_to_uint(const char *b)
 			n = n + value;
 		}
 		k++;
-		len--;
+		i--;
 	}
 	return (n);
 }
