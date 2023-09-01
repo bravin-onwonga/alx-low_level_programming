@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+ * strLen - gets length of string
+ *
+ * @s: pointer to string
+ * Return: length of string
+*/
+
+int strLen(const char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	i--;
+
+	return (i);
+}
+
+/**
  * binary_to_uint - converts binary to int
  *
  * @b: pointer to binary string
@@ -10,32 +31,23 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int n;
-	int i, j, k, value;
+	int len, j, k, value;
 
 	n = 0;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		if (b[i] != '0' && b[i] != '1')
-		{
-			return (0);
-		}
-	}
-	i = i - 1;
-	/* len = i; */
-
+	len = strLen(b);
 	k = 0;
-	while (k < 32 && i >= 0)
+	while (k < 32 && len >= 0)
 	{
-		if (b[i] == '1' && k == 0)
+		if (b[len] == '1' && k == 0)
 		{
 			n = n + 1;
 		}
 
-		else if (b[i] == '1' && k != 0)
+		else if (b[len] == '1' && k != 0)
 		{
 			value = 1;
 			j = k;
@@ -47,7 +59,7 @@ unsigned int binary_to_uint(const char *b)
 			n = n + value;
 		}
 		k++;
-		i--;
+		len--;
 	}
 	return (n);
 }
