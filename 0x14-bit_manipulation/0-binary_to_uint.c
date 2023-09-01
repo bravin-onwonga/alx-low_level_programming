@@ -28,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 	/* len = i; */
 
 	k = 0;
-	while (k < 16 && i >= 0)
+	while (k < 32 && i >= 0)
 	{
 		if (b[i] == '1' && k == 0)
 		{
