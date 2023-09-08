@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
- * _putchar - func similar to putchar of stdio
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
-*/
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * read_textfile - reads a text file and prints it to the POSIX standard output
  * @filename: name of file
  * @letters: letters is the number of letters it should read and print
@@ -45,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		while ((ch = fgetc(fp)) != EOF)
 		{
-			_putchar(ch);
+			putchar(ch);
 		}
 	}
 	fclose(fp);
