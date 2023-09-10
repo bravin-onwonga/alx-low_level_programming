@@ -11,35 +11,35 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char ch;
 	char buffer[1024];
 	int fd;
-	FILE *fp;
 	ssize_t read_bytes, bytes_written;
 
-	fp = fopen(filename, "r");
-
-	if (fp == NULL)
+	if (filename == NULL)
 	{
 		return (0);
 	}
 
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_RDONLY);
+
+	if (fd == -1)
+	{
+		return (0);
+	}
 
 	read_bytes = read(fd, buffer, letters);
 
 	if (read_bytes > 0)
 	{
-		bytes_written = write(fd, buffer, (read_bytes - 1));
-		if (bytes_written > 0)
+		bytes_written = write(STDOUT_FILENO, buffer, read_bytes - 1);
+		if (bytes_written == -1)
 		{
-			while ((ch = fgetc(fp)) != EOF)
-			{
-				putchar(ch);
-			}
-			fclose(fp);
-			return (read_bytes);
+			close(fd);
+			return (0);
 		}
+		close(fd);
+		return (bytes_written);
 	}
+	close(fd);
 	return (0);
 }
