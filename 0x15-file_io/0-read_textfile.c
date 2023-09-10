@@ -11,11 +11,11 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int ch;
+	char ch;
 	char buffer[1024];
 	int fd;
 	FILE *fp;
-	ssize_t read_bytes;
+	ssize_t read_bytes, bytes_written;
 
 	fp = fopen(filename, "r");
 
@@ -30,11 +30,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (read_bytes > 0)
 	{
-		while ((ch = fgetc(fp)) != EOF)
+		bytes_written = write(fd, buffer, (read_bytes - 1));
+		if (bytes_written > 0)
 		{
-			putchar(ch);
+			while ((ch = fgetc(fp)) != EOF)
+			{
+				putchar(ch);
+			}
+			fclose(fp);
+			return (read_bytes);
 		}
 	}
-	fclose(fp);
-	return (read_bytes);
+	return (0);
 }
