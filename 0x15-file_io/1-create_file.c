@@ -1,5 +1,15 @@
 #include "main.h"
 
+/**
+ * create_file - creates a file with 0600 permission
+ * if it didn't exists and truncates it if it did
+ *
+ * @filename: file to create
+ * @text_content: content to copy to filename
+ *
+ * Return: 1 (success); otherwise -1
+ */
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -17,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 		return (0);
 	}
 
-	bytes_written = write(fd, text_content, sizeof(text_content));
+	bytes_written = write(fd, text_content, strlen(text_content));
 
 	if (bytes_written == -1)
 	{
