@@ -45,7 +45,7 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 		exit(98);
 	}
 
-	bytes_written = write(fd, buffer, sizeof(file_from));
+	bytes_written = write(fd, buffer, sizeof(buffer));
 
 	if (bytes_written == -1)
 	{
