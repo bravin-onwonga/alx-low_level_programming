@@ -52,7 +52,7 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 	}
 
 	read_bytes = fread(buffer, STDOUT_FILENO, sizeof(buffer), fp);
-	if (read_bytes == -1)
+	if (read_bytes <= 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
