@@ -65,6 +65,11 @@ int cp_file_from_file_to(const char *file_to, char *text_content, size_t size)
 {
 	int fd;
 	ssize_t bytes_written;
+	char *newline = "\n";
+	size_t new_size = strlen(newline);
+
+	memcpy(text_content + size, newline, new_size);
+	size += new_size;
 
 	fd = open(file_to, O_TRUNC | O_RDWR | O_CREAT, 0664);
 	if (fd == -1)
