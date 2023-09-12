@@ -47,7 +47,7 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 		exit(98);
 	}
 
-	fd = open(file_to, O_CREAT | O_RDWR | O_APPEND, 0664);
+	fd = open(file_to, O_TRUNC | O_RDWR | O_CREAT, 0664);
 
 	if (fd == -1)
 	{
