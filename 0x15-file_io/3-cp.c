@@ -70,7 +70,7 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 		exit(99);
 	}
 
-	bytes_written = write(fd, buffer, (size - 1));
+	bytes_written = write(fd, buffer, size);
 	if (bytes_written == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
