@@ -78,12 +78,12 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 	}
 
 	fclose(fp);
-	close(fd);
 	if (close(fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
 		exit(100);
 	}
+
 
 	return (0);
 }
