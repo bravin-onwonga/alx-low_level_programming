@@ -59,8 +59,9 @@ int cp_file_from_file_to(const char *file_from, const char *file_to)
 
 	if (bytes_written == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
+		/* dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to); */
+		/* exit(99); */
+		return (0);
 	}
 
 	fclose(fp);
