@@ -1,75 +1,36 @@
 #include "main.h"
 
-void printInt(unsigned long int num)
-{
-	if (num / 10)
-	{
-		printInt(num / 10);
-	}
-	_putchar((num % 10) + '0');
-}
+void actual_print(unsigned long int n);
+
+/**
+ * print_binary - print a number in binary
+ *
+ * @n: integer to print
+*/
 
 void print_binary(unsigned long int n)
 {
-	int j, i = 16;
-	unsigned int value;
-	unsigned long int num = n;
-
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	if (n == 1)
-	{
-		_putchar('1');
+
+	actual_print(n);
+}
+
+/**
+ * actual_print - handles the printing
+ *
+ * @n: integer to print
+*/
+
+void actual_print(unsigned long int n)
+{
+	if (n == 0)
 		return;
-	}
 
-	while (i >= 0)
-	{
-		if (n == 0)
-		{
-			if (i != 0)
-			{
-				while(i)
-				{
-					_putchar('0');
-					i--;
-				}
-			}
-			_putchar('0');
-			return;
-		}
-		if (n == 1)
-		{
-			if (i != 0)
-			{
-				while(i)
-				{
-					_putchar('0');
-					i--;
-				}
-			}
-			_putchar('1');
-			return;
-		}
-		j = i;
-		value = 1;
-		while(j)
-		{
-			value = value * 2;
-			j--;
-		}
-		if (n >= value)
-		{
-			n = n - value;
-			_putchar('1');
-		}
-		else if(n < value && n < num)
-			_putchar('0');
+	actual_print(n >> 1);
 
-		i--;
-	}
-	return;
+	_putchar((n & 1) ? '1' : '0');
 }
