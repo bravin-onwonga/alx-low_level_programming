@@ -40,8 +40,6 @@ unsigned long int binary_to_ulint(char *str, unsigned int len)
 		value = value * 2;
 		i++;
 	}
-
-	printf("%lu\n", num);
 	return (num);
 }
 
