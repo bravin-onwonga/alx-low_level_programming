@@ -15,12 +15,13 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	count = 1;
 
+	if (index > 32)
+	{
+		return (-1);
+	}
+
 	while (count < index)
 	{
-		if (n == 0)
-		{
-			return (-1);
-		}
 		n = n >> 1;
 		count++;
 	}
