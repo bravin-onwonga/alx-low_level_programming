@@ -108,7 +108,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	ptr = int_to_Bin(ar, num);
 
-	len = getLen(ptr);
+	len = getLen(ar);
 	ar[index] = '0';
 	*n = binary_to_ulint(ar, len);
 	return (1);
