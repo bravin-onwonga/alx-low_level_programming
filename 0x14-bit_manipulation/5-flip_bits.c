@@ -31,8 +31,10 @@ unsigned int count_extra(unsigned long int num)
  * Return: number of flips needed
 */
 
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int num_1, unsigned long int num_2)
 {
+	unsigned long int n = num_1;
+	unsigned long int m = num_2;
 	unsigned int count = 0, num;
 	int i = 0;
 
