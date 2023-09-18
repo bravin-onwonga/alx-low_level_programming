@@ -34,7 +34,7 @@ unsigned int count_extra(unsigned long int num)
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int count = 0, num;
-	int i = 1;
+	int i = 0;
 
 	if ((n & 1) != (m & 1))
 	{
