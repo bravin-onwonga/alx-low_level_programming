@@ -41,12 +41,12 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		count++;
 	}
 
-	while (i < 64)
+	while (i < 16)
 	{
 		if (n == 0 && m != 0)
 		{
 			num = count_extra(m);
-			count += num;
+			count = count + num;
 			break;
 		}
 		if (m == 0 && n != 0)
