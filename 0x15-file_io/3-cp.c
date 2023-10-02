@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	read_bytes = fread(buffer, 1, sizeof(buffer), fp);
+	read_bytes = fread(buffer, STDOUT_FILENO, sizeof(buffer), fp);
 	if (read_bytes <= 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -87,7 +87,5 @@ int cp_file_from_file_to(const char *file_to, char *text_content, size_t size)
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
 		exit(100);
 	}
-
-
 	return (0);
 }
