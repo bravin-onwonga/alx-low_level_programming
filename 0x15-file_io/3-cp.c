@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	}
 
 	read_bytes = fread(buffer, 1, sizeof(buffer), fp);
-	if (read_bytes == -1)
+	if (read_bytes <= 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -56,8 +56,9 @@ int main(int argc, char *argv[])
  * cp_file_from_file_to - copies contents of fil_from to file_to
  * creates file_to if it doesn't exits permission being rw-rw-r--
  *
- * @file_from: file with content to copy
+ * @text_content: file with content to copy
  * @file_to: file to copy to | Truncate if exists
+ * @size: number of bytes in text_content
  * Return: 0 (sucess)
 */
 
@@ -80,7 +81,8 @@ int cp_file_from_file_to(const char *file_to, char *text_content, size_t size)
 		exit(99);
 	}
 
-	if (close(fd) == -1)
+	close(fd);
+	if (close(fd) != -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
 		exit(100);
