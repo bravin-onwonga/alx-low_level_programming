@@ -34,5 +34,5 @@ int calc_sqrt(int n, int div)
 		return (-1);
 	if (div * div == n)
 		return (div);
-	calc_sqrt(n, div + 1);
+	return (calc_sqrt(n, div + 1));
 }
