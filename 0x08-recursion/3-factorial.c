@@ -1,5 +1,5 @@
 #include "main.h"
-
+
 /**
   * factorial - calc the factorial of an int
   *
