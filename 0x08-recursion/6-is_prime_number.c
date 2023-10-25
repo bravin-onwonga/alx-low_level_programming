@@ -16,7 +16,7 @@ int is_prime_number(int n)
 	divisor = 2;
 
 	if (n < 2)
-		return (-1);
+		return (0);
 
 	if (n == 2)
 		return (1);
