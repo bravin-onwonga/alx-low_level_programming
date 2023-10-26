@@ -19,4 +19,6 @@ int is_palindrome(char *s);
 int str_compare(char *s, int start, int end);
 int compare_str(char *str1, char *str2);
 
+int wildcmp(char *s1, char *s2);
+int does_compare(char *s1, char *s2, int i, int j);
 #endif /*MAIN-H*/
