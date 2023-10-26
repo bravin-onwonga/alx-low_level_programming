@@ -14,4 +14,9 @@ int calc_sqrt(int n, int div);
 int is_prime_number(int n);
 int find_if_prime(int n, int divisor);
 
+/* palindrome functions */
+int is_palindrome(char *s);
+int str_compare(char *s, int start, int end);
+int compare_str(char *str1, char *str2);
+
 #endif /*MAIN-H*/
