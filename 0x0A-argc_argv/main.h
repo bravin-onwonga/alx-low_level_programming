@@ -6,5 +6,6 @@
 #include <string.h>
 
 int _putchar(char c);
+int calc_change(int n);
 
 #endif /* MAIN_H */
