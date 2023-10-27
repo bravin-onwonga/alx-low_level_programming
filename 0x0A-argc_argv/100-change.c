@@ -20,6 +20,12 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	if (atoi(argv[1]) < 0)
+	{
+		printf("%d\n", 0);
+		exit(EXIT_SUCCESS);
+	}
+
 	num_coins = calc_change(atoi(argv[1]));
 	printf("%d\n", num_coins);
 
