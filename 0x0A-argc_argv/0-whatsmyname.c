@@ -3,15 +3,15 @@
 /**
  * main - prints the program name
  *
+ * @argc: argument count
+ * @argv: argument vector
  * Return: 0 sucsess
  */
 
 int main(int argc, char *argv[])
 {
-	int index;
-
-	index = argc - argc;
-	printf("%s\n", argv[index]);
+	(void)argc;
+	printf("%s\n", argv[0]);
 
 	exit(EXIT_SUCCESS);
 }
