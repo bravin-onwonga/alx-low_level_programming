@@ -7,9 +7,6 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len_s1, len_s2, k, i;
 	char *ar;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
-
 	len_s1 = str_len(s1);
 	len_s2 = str_len(s2);
 
