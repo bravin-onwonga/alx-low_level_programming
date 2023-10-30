@@ -7,6 +7,12 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len_s1, len_s2, k, i;
 	char *ar;
 
+	if (s1 == NULL || s2 == NULL)
+	{
+		s1 = " ";
+		s2 = " ";
+	}
+
 	len_s1 = str_len(s1);
 	len_s2 = str_len(s2);
 
@@ -15,6 +21,7 @@ char *str_concat(char *s1, char *s2)
 	if (ar == NULL)
 		return (NULL);
 
+	i = 0;
 	while (i < (len_s1 - 1))
 	{
 		ar[i] = s1[i];
