@@ -53,7 +53,7 @@ char **strtow(char *str)
 	z = 0;
 	while (m < word_count)
 	{
-		ar[i] = malloc(sizeof(char) * (int_arr[m] - 2));
+		ar[i] = malloc(sizeof(char) * (int_arr[m] - 1));
 		r = 0;
 		while (r <= int_arr[m])
 		{
