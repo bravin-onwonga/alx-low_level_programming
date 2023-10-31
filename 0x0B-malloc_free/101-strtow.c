@@ -23,12 +23,10 @@ char **strtow(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	len = _str_len(str) - 1;
-
-	if ((len == 0) && (str[0] == ' '))
-		return (NULL);
-
 	len = get_str_len(str);
+
+	if (len <= 0)
+		return (NULL);
 
 	s = malloc(sizeof(char) * len + 1);
 
