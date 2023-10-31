@@ -18,7 +18,7 @@ char **strtow(char *str)
 	char **ar;
 	char *s;
 	int *int_arr;
-	int len, i, word_count, m, r, z;
+	int len, i, word_count, m, r, z, f;
 
 	if (str == NULL)
 		return (NULL);
@@ -68,6 +68,13 @@ char **strtow(char *str)
 		m++;
 	}
 	ar[i] = NULL;
+
+	f = 0;
+	while (f < word_count)
+	{
+		free(int_arr[f]);
+		f++;
+	}
 
 	return (ar);
 }
