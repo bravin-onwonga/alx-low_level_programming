@@ -43,7 +43,7 @@ char **strtow(char *str)
 
 	int_arr = create_int_array(s, int_arr, word_count);
 
-	ar = malloc(sizeof(char *) * (word_count - 1));
+	ar = malloc(sizeof(char *) * word_count);
 
 	if (ar == NULL)
 		return (NULL);
@@ -53,7 +53,7 @@ char **strtow(char *str)
 	z = 0;
 	while (m < word_count)
 	{
-		ar[i] = malloc(sizeof(char) * int_arr[m]);
+		ar[i] = malloc(sizeof(char) * int_arr[m] + 1);
 		r = 0;
 		while (r <= int_arr[m])
 		{
