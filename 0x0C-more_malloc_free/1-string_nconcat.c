@@ -72,7 +72,7 @@ char *concatenate_str(char *new_str, char *s1, char *s2, unsigned int n)
 	}
 
 	k = 0;
-	while (k <= n)
+	while (k < n)
 	{
 		new_str[j] = s2[k];
 		k++;
