@@ -37,6 +37,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			new_arr[i] = temp[i];
 			i++;
 		}
+		while (i < new_size)
+		{
+			new_arr[i] = 0;
+		}
 	}
 	j = 0;
 	if (old_size < new_size)
