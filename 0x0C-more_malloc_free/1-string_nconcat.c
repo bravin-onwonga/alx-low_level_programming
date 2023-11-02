@@ -1,6 +1,5 @@
 #include "main.h"
 
-unsigned int str_len(char *str);
 char *concatenate_str(char *new_str, char *s1, char *s2, unsigned int n);
 
 /**
@@ -19,18 +18,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 	{
-		s1 = malloc(1);
+		s1 = malloc(sizeof(char) * 1);
 		s1[0] = '\0';
 	}
 
 	if (s2 == NULL)
 	{
-		s2 = malloc(1);
+		s2 = malloc(sizeof(char) * 1);
 		s2[0] = '\0';
 	}
 
-	len_s1 = str_len(s1);
-	len_s2 = str_len(s2) + 1;
+	for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
+		;
+	for (len_s2 = 0; s2[len_s2] != '\0'; len_s2++)
+		;
 
 	if (len_s2 <= n)
 		n = len_s2;
@@ -45,26 +46,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	new_str = concatenate_str(new_str, s1, s2, n);
 
 	return (new_str);
-}
-
-/**
- * str_len - calculates length of a string
- *
- * @str: string
- * Return: length of string
- */
-
-unsigned int str_len(char *str)
-{
-	unsigned int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-
-	return (i);
 }
 
 /**
