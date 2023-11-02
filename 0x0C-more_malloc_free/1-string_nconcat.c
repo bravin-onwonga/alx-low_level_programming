@@ -44,7 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	new_str = concatenate_str(new_str, s1, s2, n);
 
-	test_len = str_len(new_str + 1);
 	return (new_str);
 }
 
