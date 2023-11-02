@@ -72,6 +72,7 @@ char *concatenate_str(char *new_str, char *s1, char *s2, unsigned int n)
 		k++;
 		j++;
 	}
+	new_str[j] = '\0';
 
 	return (new_str);
 }
