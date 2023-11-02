@@ -46,10 +46,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			new_arr[j] = temp[j];
 			j++;
 		}
-		while (j < new_size)
-		{
-			new_arr[j] = 0;
-		}
 	}
 	ptr = (void *)new_arr;
 	return (ptr);
