@@ -8,42 +8,33 @@
 
 void print_number(int n)
 {
-	int div;
+	int div, temp;
 
-	if (n < 0)
+	if (n == INT_MIN)
+	{
+		_putchar('-');
+		n = -(n + 1);
+	}
+
+	else if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
 
-	div = 10;
-	if (n / div < 1)
+	div = 1;
+	temp = n;
+
+	while (temp / 10 > 0)
 	{
-		_putchar((n % 10) + '0');
-	}
-	else if (n / div == 1)
-	{
-		_putchar('1');
-		_putchar('0');
-	}
-	else if (n < 100)
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
+		div = div * 10;
+		temp = temp / 10;
 	}
 
-	else
+	while (div > 0)
 	{
-		while (n / div >= 10)
-		{
-			div = div * 10;
-		}
-		while (div >= 10)
-		{
-			_putchar((n / div) + '0');
-			n = n - ((n / div) * div);
-			div = div / 10;
-		}
-		_putchar((n % 10) + '0');
+		_putchar((n / div) + '0');
+		n = n % div;
+		div = div / 10;
 	}
 }
