@@ -1,60 +1,49 @@
 #include "main.h"
 
-int get_int_len(int n);
-void print_int(int n, int len);
+/**
+ * print_number - prints an integer
+ *
+ * @n: integer to print
+ */
 
 void print_number(int n)
 {
-	int len;
-
-	len = get_int_len(n);
-	print_int(n, len);
-}
-
-int get_int_len(int n)
-{
-	int len;
-
-	len = 0;
+	int div;
 
 	if (n < 0)
 	{
+		_putchar('-');
 		n = -n;
-		len += 1;
 	}
 
-	while (n / 10 >= 1)
+	div = 10;
+	if (n / div < 1)
 	{
-		len++;
-		n = n - (10 * (n / 10));
+		_putchar((n % 10) + '0');
 	}
-	len++;
-	return (len);
-}
-
-void print_int(int n, int len)
-{
-	char s[len];
-	int i = 0;
-	int k;
-
-	while (i < len)
+	else if (n / div == 1)
 	{
-		if (n < 0)
+		_putchar('1');
+		_putchar('0');
+	}
+	else if (n < 100)
+	{
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
+	}
+
+	else
+	{
+		while (n / div >= 10)
 		{
-			s[i] = '-';
-			i++;
+			div = div * 10;
 		}
-		s[i] = ((n % 10) + '0');
-		n = (n - (10 * (n / 10)));
-		i++;
-	}
-
-	k = len - 1;
-
-	while (k >= 0)
-	{
-		_putchar(s[k]);
-		k--;
+		while (div >= 10)
+		{
+			_putchar((n / div) + '0');
+			n = n - ((n / div) * div);
+			div = div / 10;
+		}
+		_putchar((n % 10) + '0');
 	}
 }
