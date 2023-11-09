@@ -35,8 +35,8 @@ void print_all(const char *const format, ...)
 			printf("%s%c", sep, va_arg(ap, int));
 			break;
 		}
-		p++;
 		sep = ", ";
+		p++;
 	}
 	printf("\n");
 	va_end(ap);
