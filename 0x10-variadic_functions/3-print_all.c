@@ -39,6 +39,6 @@ void print_all(const char *const format, ...)
 		if (*p != '\0' && (*p == 'i' || *p == 'f' || *p == 's' || *p == 'c'))
 			printf(", ");
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
