@@ -2,47 +2,43 @@
 
 /**
  * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ *
+ * @format: str containing list of types of args
  */
+
 void print_all(const char *const format, ...)
 {
-	int i = 0;
-	char *str, *sep = "";
+	va_list(ap);
+	const char *p;
+	char *str;
 
-	va_list list;
+	va_start(ap, format);
 
-	va_start(list, format);
-
-	if (format)
+	p = format;
+	while (*p != '\0')
 	{
-		while (format[i])
+		switch (*p)
 		{
-			switch (format[i])
-			{
-			case 'c':
-				printf("%s%c", sep, va_arg(list, int));
-				break;
-			case 'i':
-				printf("%s%d", sep, va_arg(list, int));
-				break;
-			case 'f':
-				printf("%s%f", sep, va_arg(list, double));
-				break;
-			case 's':
-				str = va_arg(list, char *);
-				if (!str)
-					str = "(nil)";
-				printf("%s%s", sep, str);
-				break;
-			default:
-				i++;
-				continue;
-			}
-			sep = ", ";
-			i++;
+		case 'i':
+			printf("%d", va_arg(ap, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(ap, double));
+			break;
+		case 's':
+			str = va_arg(ap, char *);
+			if (str == NULL)
+				str = "(nil)";
+			printf("%s", str);
+			break;
+		case 'c':
+			printf("%c", va_arg(ap, int));
+			break;
 		}
+		p++;
+		if (*p != '\0' && (*p == 'i' || *p == 'f' || *p == 's' || *p == 'c'))
+			printf(", ");
 	}
-
+	va_end(ap);
 	printf("\n");
-	va_end(list);
 }
