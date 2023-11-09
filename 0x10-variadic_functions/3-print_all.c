@@ -10,7 +10,7 @@ void print_all(const char *const format, ...)
 {
 	va_list(ap);
 	const char *p;
-	char *str;
+	char *str, *sep = "";
 
 	va_start(ap, format);
 
@@ -20,24 +20,23 @@ void print_all(const char *const format, ...)
 		switch (*p)
 		{
 		case 'i':
-			printf("%d", va_arg(ap, int));
+			printf("%s%d", sep, va_arg(ap, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double));
+			printf("%s%f", sep, va_arg(ap, double));
 			break;
 		case 's':
 			str = va_arg(ap, char *);
 			if (str == NULL)
 				str = "(nil)";
-			printf("%s", str);
+			printf("%s%s", sep, str);
 			break;
 		case 'c':
-			printf("%c", va_arg(ap, int));
+			printf("%s%c", sep, va_arg(ap, int));
 			break;
 		}
 		p++;
-		if (*p != '\0' && (*p == 'i' || *p == 'f' || *p == 's' || *p == 'c'))
-			printf(", ");
+		sep = ", ";
 	}
 	printf("\n");
 	va_end(ap);
