@@ -1,16 +1,13 @@
 section .data
-    holberton_str db 'Hello, Holberton', 0xA
+    format db `Hello, Holberton\n`, 0
 
 section .text
     global main
+    extern printf
 
 main:
-    mov rax, 1
-    mov rdi, 1
-    mov rsi, holberton_str
-    mov rdx, 18
-    syscall
-
-    mov rax, 60
-    xor rdi, rdi
-    syscall
+    mov   edi, format
+    xor   eax, eax
+    call  printf
+    mov   eax, 0
+    ret
