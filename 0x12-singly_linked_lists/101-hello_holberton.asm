@@ -1,19 +1,16 @@
 section .data
-    format db 'Hello, %s!', 0
-    holberton_str db 'Holberton', 0
+    holberton_str db 'Hello, Holberton', 0xA
 
 section .text
-    global my_start
+    global main
 
-    extern printf
-    extern exit
-
-my_start:
-    ; Call printf
-    mov rdi, format
+main:
+    mov rax, 1
+    mov rdi, 1
     mov rsi, holberton_str
-    call printf
+    mov rdx, 18
+    syscall
 
     mov rax, 60
     xor rdi, rdi
-    call exit
+    syscall
