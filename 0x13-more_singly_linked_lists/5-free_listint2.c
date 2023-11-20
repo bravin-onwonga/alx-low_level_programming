@@ -1,7 +1,5 @@
 #include "lists.h"
 
-void free_listint(listint_t *head);
-
 /**
  * free_listint2 - frees a singly linked list
  *		and sets head to NULL
@@ -11,24 +9,14 @@ void free_listint(listint_t *head);
 
 void free_listint2(listint_t **head)
 {
-	free_listint(*head);
-	*head = NULL;
-}
+	listint_t *temp, *curr;
 
-/**
- * free_listint - frees a singly linked list
- * @head: head node
- */
-
-void free_listint(listint_t *head)
-{
-	listint_t *temp;
-
-	while (head != NULL)
+	curr = *head;
+	while (curr != NULL)
 	{
-		temp = head->next;
-		free(head);
-		head = temp;
+		temp = curr->next;
+		free(curr);
+		curr = temp;
 	}
-	free(head);
+	*head = NULL;
 }
