@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef unsigned long int ulint;
 
@@ -13,8 +14,8 @@ void actual_print(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
 int set_bit(unsigned long int *n, unsigned int index);
 int clear_bit(unsigned long int *n, unsigned int index);
-unsigned long int binary_to_ulint(char *b);
 unsigned int flip_bits(unsigned long int n, unsigned long int m);
+char *int_to_Bin(char *ar, unsigned long int num);
 int get_endianness(void);
 
 #endif /* MAIN_H */
