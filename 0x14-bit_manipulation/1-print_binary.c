@@ -1,6 +1,6 @@
 #include "main.h"
 
-void actual_print(unsigned long int n); /*prototype */
+void actual_print(unsigned long int n);
 
 /**
  * print_binary - print a number in binary
