@@ -1,6 +1,6 @@
 #include "main.h"
 
-unsigned int binary_to_ulint(char *b);
+unsigned long int binary_to_ulint(char *b);
 
 /**
  * clear_bit - sets bit at index to 0
@@ -35,6 +35,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	num = binary_to_ulint(bitarr);
 
 	*n = num;
+
+	free(bitarr);
 	return (0);
 }
 
@@ -45,11 +47,11 @@ int clear_bit(unsigned long int *n, unsigned int index)
  * Return: converted int (success); otherwise 0
  */
 
-unsigned int binary_to_ulint(char *b)
+unsigned long int binary_to_ulint(char *b)
 {
 	unsigned long int n;
 	int len = 31, i, j, k;
-	int value;
+	unsigned long int value;
 
 	n = 0;
 
