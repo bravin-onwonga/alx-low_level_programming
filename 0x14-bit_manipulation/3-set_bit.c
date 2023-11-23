@@ -37,7 +37,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	*n = num;
 
 	free(bitarr);
-	return (0);
+	return (1);
 }
 
 /**
