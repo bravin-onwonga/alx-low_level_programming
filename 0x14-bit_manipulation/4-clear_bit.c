@@ -18,11 +18,11 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	temp = *n;
 
-	if (index > 32)
+	if (index > 64)
 		return (-1);
 
-	i = 31;
-	bitarr = malloc(sizeof(char) * 32);
+	i = 63;
+	bitarr = malloc(sizeof(char) * 64);
 
 	while (i >= 0)
 	{
@@ -31,7 +31,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		i--;
 	}
 
-	bitarr[31 - index] = '0';
+	bitarr[63 - index] = '0';
 	num = binary_to_ulint(bitarr);
 
 	*n = num;
@@ -50,39 +50,17 @@ int clear_bit(unsigned long int *n, unsigned int index)
 unsigned long int binary_to_ulint(char *b)
 {
 	unsigned long int n;
-	int len = 31, i, j, k;
-	unsigned long int value;
-
-	n = 0;
-
-	if (b == NULL)
-		return (0);
+	unsigned long int value = 1;
+	int i = 0, len = 63;
 
 	i = len;
-	k = 0;
-	while (k <= len && i >= 0)
+	while (i > 0)
 	{
-		if (b[i] != '1' && b[i] != '0')
+		if (b[i] == '1')
 		{
-			return (0);
-		}
-		if (b[i] == '1' && k == 0)
-		{
-			n = n + 1;
-		}
-
-		else if (b[i] == '1' && k != 0)
-		{
-			value = 1;
-			j = k;
-			while (j > 0)
-			{
-				value = value * 2;
-				j--;
-			}
 			n = n + value;
 		}
-		k++;
+		value = value * 2;
 		i--;
 	}
 	return (n);
