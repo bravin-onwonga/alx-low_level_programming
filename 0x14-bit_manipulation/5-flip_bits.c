@@ -16,7 +16,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	if ((n & 1) != (m & 1))
 		count++;
 
-	for (i = 0; i <= 32; i++)
+	for (i = 0; i <= 64; i++)
 	{
 		countBits_n = (n >> 1 & 1 ? 1 : 0);
 		countBits_m = (m >> 1 & 1 ? 1 : 0);
