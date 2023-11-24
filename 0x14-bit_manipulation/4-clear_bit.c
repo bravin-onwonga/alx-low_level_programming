@@ -14,7 +14,7 @@ unsigned int getLen(char *ar)
 	i = 0;
 	while (ar[i] != '\0')
 		i++;
-
+	
 	return (i);
 }
 
