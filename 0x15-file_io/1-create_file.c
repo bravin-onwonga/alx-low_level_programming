@@ -11,7 +11,7 @@ size_t get_strlen(char *s)
 {
 	size_t i;
 
-	for (i = 0; s[i] != NULL; i++)
+	for (i = 0; s[i]; i++)
 		;
 
 	return (i);
