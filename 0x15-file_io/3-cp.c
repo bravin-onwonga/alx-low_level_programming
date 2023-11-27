@@ -72,10 +72,7 @@ int cp_file_from_file_to(char *file_from, char *file_to)
 	fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, mode);
 
 	if (fd == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
+		check_fails(-1, -1, file_to, 'W');
 
 	fd_txt = open(file_from, O_RDONLY);
 
@@ -122,7 +119,7 @@ void check_fails(int file_state, int fd, char *file_name, char action_tried)
 		exit(98);
 	}
 
-	if (action_tried == 'R' && file_state == -1)
+	if (action_tried == 'C' && file_state == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
