@@ -25,6 +25,12 @@ int main(int argc, char *argv[])
 	file_from = argv[1];
 	file_to = argv[2];
 
+	if (!(file_from))
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
 	res = cp_file_from_file_to(file_from, file_to);
 
 	return (res);
