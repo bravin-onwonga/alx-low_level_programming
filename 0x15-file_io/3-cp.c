@@ -66,8 +66,8 @@ int cp_file_from_file_to(char *file_from, char *file_to)
 {
 	int fd, fd_txt, close_fd, close_fdtxt;
 	mode_t mode = 0664;
-	ssize_t bytes_read, bytes_written;
-	char *buf;
+	ssize_t bytes_read = 1024, bytes_written;
+	char buf[1024];
 
 	fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, mode);
 
@@ -78,28 +78,20 @@ int cp_file_from_file_to(char *file_from, char *file_to)
 	}
 
 	fd_txt = open(file_from, O_RDONLY);
-	buf = malloc((get_strlen(file_from) * sizeof(char *)));
-	if (buf == NULL || fd_txt == -1)
-	{
-		free(buf);
-		check_fails(-1, -1, file_from, 'R');
-	}
 
-	while ((bytes_read = read(fd_txt, buf, 1024)) > 0)
+	if (fd_txt == -1)
+		check_fails(-1, -1, file_from, 'R');
+
+	while (bytes_read == 1024)
 	{
+		bytes_read = read(fd_txt, buf, sizeof(buf));
+		if (bytes_read == -1)
+			check_fails(-1, -1, file_from, 'R');
 		bytes_written = write(fd, buf, bytes_read);
 		if (bytes_written == -1)
-		{
-			free(buf);
 			check_fails(-1, -1, file_to, 'W');
-		}
 	}
 
-	if (bytes_read == -1)
-	{
-		free(buf);
-		check_fails(-1, -1, file_from, 'R');
-	}
 	close_fdtxt = close(fd_txt);
 	check_fails(close_fdtxt, fd_txt, NULL, 'C');
 	close_fd = close(fd);
