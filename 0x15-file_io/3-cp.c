@@ -42,12 +42,6 @@ int main(int argc, char *argv[])
 	file_from = argv[1];
 	file_to = argv[2];
 
-	if (file_from == NULL)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
-
 	res = cp_file_from_file_to(file_from, file_to);
 
 	return (res);
@@ -121,7 +115,7 @@ void check_fails(int file_state, int fd, char *file_name, char action_tried)
 
 	if (action_tried == 'C' && file_state == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
