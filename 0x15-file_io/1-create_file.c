@@ -40,6 +40,12 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
+	if (text_content == NULL)
+	{
+		text_content = malloc(1);
+		text_content[0] = '\0';
+	}
+
 	len = get_strlen(text_content);
 
 	bytes_written = write(fd, text_content, len);
