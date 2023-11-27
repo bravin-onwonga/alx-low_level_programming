@@ -4,23 +4,6 @@ int cp_file_from_file_to(char *file_from, char *file_to);
 void check_fails(int file_state, int fd, char *file_name, char action_tried);
 
 /**
- * get_strlen - finds length of string
- *
- * @s: string
- * Return: length of string
- */
-
-size_t get_strlen(char *s)
-{
-	size_t i;
-
-	for (i = 0; s[i]; i++)
-		;
-
-	return (i);
-}
-
-/**
  * main - entry point
  *
  * @argc: argument count
@@ -80,7 +63,13 @@ int cp_file_from_file_to(char *file_from, char *file_to)
 			check_fails(-1, -1, file_from, 'R');
 		bytes_written = write(fd, buf, bytes_read);
 		if (bytes_written == -1)
+		{
+			close_fdtxt = close(fd_txt);
+			close_fd = close(fd);
+			check_fails(close_fdtxt, fd_txt, NULL, 'C');
+			check_fails(close_fd, fd, NULL, 'C');
 			check_fails(-1, -1, file_to, 'W');
+		}
 	}
 
 	close_fdtxt = close(fd_txt);
