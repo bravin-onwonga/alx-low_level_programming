@@ -10,10 +10,6 @@
 - Used in the OS by thread scheduler to keep track of processes that execute at that time.
 - LRU (Least) and MRU(Most Recently Used) cache are constructed using doubly linked lists
 
-              ------------------------------------------------------------------------
-
-	                    **Overview of the tasks**
-
 ### Files in this project:
 
 Filename | Description
