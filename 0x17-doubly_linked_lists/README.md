@@ -4,8 +4,15 @@
 - Almost similar to singly linked list excepts that you can traverse it ```forward``` and ```backward```
 - This is possible since doubly linked list contain pointer to the ```previous node``` and the ```next node```, unlike ```singly linked list``` which only contain a pointer to the next node in each node.
 
-### Where are doubly linked list used
+### Where are doubly linked list used?
+- Doubly linked lists are used in web browsers for backward and forward navigation of web pages.
+- By various operations for undo and redo operations.
+- Used in the OS by thread scheduler to keep track of processes that execute at that time.
+- LRU (Least) and MRU(Most Recently Used) cache are constructed using doubly linked lists
 
+              ------------------------------------------------------------------------
+
+	                    **Overview of the tasks**
 
 ### Files in this project:
 
