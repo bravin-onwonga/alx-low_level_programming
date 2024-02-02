@@ -58,14 +58,14 @@ hash_node_t *create_pair(const char *key, const char *value)
 		return (NULL);
 
 	new_node->key = malloc(sizeof(key) + 1);
-	if (new_node == NULL)
+	if (new_node->key == NULL)
 	{
 		free(new_node);
 		return (NULL);
 	}
 
 	new_node->value = malloc(sizeof(value) + 1);
-	if (new_node == NULL)
+	if (new_node->value == NULL)
 	{
 		free(new_node->key);
 		free(new_node);
