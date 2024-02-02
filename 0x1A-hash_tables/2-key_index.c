@@ -3,7 +3,7 @@
 /**
  * key_index - gives you the index of a key
  *
- * @key: the key of the value
+ * @key: the key
  * @size: size of the array
  *
  * Return: index of key in array
