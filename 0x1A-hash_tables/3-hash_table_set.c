@@ -16,14 +16,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *node;
-	hash_node_t *temp;
 
 	if (!key)
 		return (0);
 
 	index = hash_key(key) % ht->size;
-
-	printf("%lu\n", ht->size);
 
 	node = create_pair(key, value);
 
@@ -39,13 +36,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* Incase of collision */
 	node->next = ht->array[index];
 	ht->array[index] = node;
-
-	temp = ht->array[index];
-	while (temp != NULL)
-	{
-		printf("%s: %s at index - %lu", temp->key, temp->value, index);
-		temp = temp->next;
-	}
 
 	return (1);
 }
