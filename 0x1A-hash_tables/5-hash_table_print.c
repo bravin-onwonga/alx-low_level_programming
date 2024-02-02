@@ -10,29 +10,33 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	int count = 0;
 
-	for (i = 0; i < ht->size; i++)
+	if (ht)
 	{
-		if (ht->array[i])
-			count++;
-	}
 
-	printf("{");
-
-	i = 0;
-	while (i < ht->size && count >= 0)
-	{
-		if (ht->array[i] && count != 0)
+		for (i = 0; i < ht->size; i++)
 		{
-			printf("\'%s\' : \'%s\', ", ht->array[i]->key, ht->array[i]->value);
-			count--;
+			if (ht->array[i])
+				count++;
 		}
 
-		if (ht->array[i] && count == 0)
+		printf("{");
+
+		i = 0;
+		while (i < ht->size && count >= 0)
 		{
-			printf("\'%s\' : \'%s\'", ht->array[i]->key, ht->array[i]->value);
-			count--;
+			if (ht->array[i] && count != 0)
+			{
+				printf("\'%s\' : \'%s\', ", ht->array[i]->key, ht->array[i]->value);
+				count--;
+			}
+
+			if (ht->array[i] && count == 0)
+			{
+				printf("\'%s\' : \'%s\'", ht->array[i]->key, ht->array[i]->value);
+				count--;
+			}
+			i++;
 		}
-		i++;
+		printf("}\n");
 	}
-	printf("}\n");
 }
