@@ -22,6 +22,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = hash_key(key) % ht->size;
 
+	if (index >= ht->size)
+		return (0);
+
 	node = create_pair(key, value);
 
 	if (!node)
