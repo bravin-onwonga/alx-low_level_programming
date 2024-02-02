@@ -26,11 +26,11 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i] && count != 0)
 		{
-			printf("\'%s\' : \'%s\', ", ht->array[i]->key, ht->array[i]->value);
+			printf("\'%s\': \'%s\', ", ht->array[i]->key, ht->array[i]->value);
 			temp = ht->array[i]->next;
 			while (temp)
 			{
-				printf("\'%s\' : \'%s\', ", ht->array[i]->key, temp->value);
+				printf("\'%s\': \'%s\', ", ht->array[i]->key, temp->value);
 				temp = temp->next;
 			}
 			count--;
@@ -38,10 +38,10 @@ void hash_table_print(const hash_table_t *ht)
 		if (ht->array[i] && count == 0)
 		{
 			if (!ht->array[i]->next)
-				printf("\'%s\' : \'%s\'", ht->array[i]->key, ht->array[i]->value);
+				printf("\'%s\': \'%s\'", ht->array[i]->key, ht->array[i]->value);
 			else
 			{
-				printf("\'%s\' : \'%s\', ", ht->array[i]->key, temp->value);
+				printf("\'%s\': \'%s\', ", ht->array[i]->key, temp->value);
 				temp = ht->array[i]->next;
 				print_linked_list(temp, ht->array[i]->key);
 			}
@@ -64,8 +64,8 @@ void print_linked_list(hash_node_t *node, const char *key)
 
 	while (temp->next)
 	{
-		printf("\'%s\' : \'%s\', ", key, temp->value);
+		printf("\'%s\': \'%s\', ", key, temp->value);
 		temp = temp->next;
 	}
-	printf("\'%s\' : \'%s\'", key, temp->value);
+	printf("\'%s\': \'%s\'", key, temp->value);
 }
