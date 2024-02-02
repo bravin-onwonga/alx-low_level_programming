@@ -16,11 +16,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *node;
+	hash_node_t *temp;
 
 	if (!key)
 		return (0);
 
 	index = hash_key(key) % ht->size;
+
+	printf("%lu\n", ht->size);
 
 	node = create_pair(key, value);
 
@@ -34,9 +37,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	/* Incase of collision */
-	printf("collison\n");
 	node->next = ht->array[index];
 	ht->array[index] = node;
+
+	temp = ht->array[index];
+	while (temp != NULL)
+	{
+		printf("%s: %s at index - %lu", temp->key, temp->value, index);
+		temp = temp->next;
+	}
 
 	return (1);
 }
@@ -81,7 +90,7 @@ hash_node_t *create_pair(const char *key, const char *value)
 }
 
 /**
- * hash_djb2 - implementation of the djb2 algorithm
+ * hash_key - implementation of the djb2 algorithm
  * @str: string used to generate hash value
  *
  * Return: hash value
