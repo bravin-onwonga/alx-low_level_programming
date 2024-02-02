@@ -72,7 +72,7 @@ hash_node_t *create_pair(const char *key, const char *value)
 		return (NULL);
 	}
 
-	new_node->key = key;
+	strcpy(new_node->key, key);
 	strcpy(new_node->value, value);
 	new_node->next = NULL;
 
