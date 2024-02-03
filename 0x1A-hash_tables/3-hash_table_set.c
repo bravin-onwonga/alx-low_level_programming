@@ -15,15 +15,29 @@ hash_node_t *create_pair(const char *key, const char *value);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *node;
+	hash_node_t *node, *curr;
 
-	if (!key)
+	if (!key || !ht)
 		return (0);
 
 	index = hash_key(key) % ht->size;
 
 	if (index >= ht->size)
 		return (0);
+
+	curr = ht->array[index];
+	while (curr)
+	{
+		if (strcmp(curr->key, key) == 0)
+		{
+			free(curr->value);
+			curr->value = strdup(value);
+			if (!curr->value)
+				return (0);
+			return (1);
+		}
+		curr = curr->next;
+	}
 
 	node = create_pair(key, value);
 
@@ -75,8 +89,8 @@ hash_node_t *create_pair(const char *key, const char *value)
 		return (NULL);
 	}
 
-	strcpy(new_node->key, key);
-	strcpy(new_node->value, value);
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
 	new_node->next = NULL;
 
 	return (new_node);
