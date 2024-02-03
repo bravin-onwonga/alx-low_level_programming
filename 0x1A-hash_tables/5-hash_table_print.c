@@ -49,7 +49,7 @@ void print_linked_list(hash_node_t *node)
 
 	while (temp)
 	{
-		printf(", '%s': '%s', ", temp->key, temp->value);
+		printf(", '%s': '%s'", temp->key, temp->value);
 		temp = temp->next;
 	}
 }
