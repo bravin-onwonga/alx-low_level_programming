@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i])
 		{
-			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+			printf("'%s': '%s'", ht->array[i]->key, ht->array[i]->value);
 			temp = ht->array[i]->next;
 			print_linked_list(temp);
 			count--;
@@ -49,7 +49,7 @@ void print_linked_list(hash_node_t *node)
 
 	while (temp)
 	{
-		printf(", '%s' : '%s', ", temp->key, temp->value);
+		printf(", '%s': '%s', ", temp->key, temp->value);
 		temp = temp->next;
 	}
 }
