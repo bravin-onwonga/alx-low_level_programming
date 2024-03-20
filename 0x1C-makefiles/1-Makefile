@@ -1,0 +1,7 @@
+# creates an executable school
+
+CC := gcc # compiler to be used
+SRC := $(wildcard *.c)
+
+all:
+	${CC} $(SRC) -o school
