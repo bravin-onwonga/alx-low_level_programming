@@ -26,4 +26,5 @@ fclean:
 	$(RM) -f $(OBJ)
 
 re:
-	fclean all
+	oclean
+	@$(MAKE) all
