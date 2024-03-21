@@ -1,5 +1,7 @@
+# deletes files afterwards
+
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = school.c main.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm
@@ -13,13 +15,13 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -f *~ school
+	$(RM) -f *~ $(NAME)
 
 oclean:
 	$(RM) -f $(OBJ)
 
 fclean:
-	$(RM) -f *~ school
+	$(RM) -f *~ $(NAME)
 	$(RM) -f $(OBJ)
 
 re:
