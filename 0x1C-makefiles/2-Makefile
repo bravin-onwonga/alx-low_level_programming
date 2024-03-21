@@ -1,9 +1,9 @@
 # creates an executable school
 
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := ${SRC:.c=.o}
-NAME := school
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = ${SRC:.c=.o}
+NAME = school
 
 all: $(NAME)
 
